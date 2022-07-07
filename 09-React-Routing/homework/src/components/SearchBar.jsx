@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SearchBar({onSearch}) {
   const [city, setCity] = useState("");
@@ -13,7 +14,12 @@ export default function SearchBar({onSearch}) {
         value={city}
         onChange={e => setCity(e.target.value)}
       />
+     
       <input type="submit" value="Agregar" />
+      <Link to="/cards">
+        <span>go watch cards</span>
+      </Link>
+      
     </form>
   );
 }

@@ -9,7 +9,7 @@ export default function Card({min,max,name,img,id,onClose}) {
     <br></br>
     el nombre es: {name}
     <br></br>
-    la imagen es: <img src={img} alt="img"></img>
+    la imagen es: <img src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} alt="img"></img>
     <br></br>
     <button onClick={()=>onClose(id)}>Cerrar</button>
     <br></br>

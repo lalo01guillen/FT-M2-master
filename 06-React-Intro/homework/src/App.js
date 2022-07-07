@@ -13,6 +13,7 @@ function App() {
 
   const onSearch = async (ciudad) => {
     const data = await getWeather(ciudad)
+    //console.log(data);
     if (data !== null) {
       setCities([...cities, data]);
     } else {

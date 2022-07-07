@@ -1,35 +1,38 @@
-import React, { Component } from 'react';
-import store from '../store.js';
+import React from 'react';
 import * as actionsCreators from '../actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchPost } from '../actions/index.js';
-import axios from 'axios';
 
 
-const Counter = ({ counter, increment, decrement, reset, fetchPost}) => (
-      <p>
-        Clicked: {counter} times
-        {' '}
-        <button onClick={increment}>
-          +
-        </button>
-        {' '}
-        <button onClick={decrement}>
-          -
-        </button>
-        {' '}
-        <button onClick={reset}>
-          Reset
-        </button>
-        <button onClick={() => fetchPost(counter)}>
-          Fetch
-        </button>
-      </p>
-    )
+
+const Counter = ({ counter, increment, decrement, reset, fetchPost}) =>{
+ //const counter2 = useSelector((state) => {state.Count})
+return (
+  <p>
+    Clicked: {counter} times
+    {' '}
+    <button onClick={increment}>
+      +
+    </button>
+    {' '}
+    <button onClick={decrement}>
+      -
+    </button>
+    {' '}
+    <button onClick={reset}>
+      Reset
+    </button>
+    <button onClick={() => fetchPost(counter)}>
+      Fetch
+    </button>
+  </p>
+)
+} 
+
+  
 
 const mapStateToProps = (state) => ({
-  counter: state.count,
+  counter: state.count
 });
 
 function mapDispatchToProps(dispatch) {

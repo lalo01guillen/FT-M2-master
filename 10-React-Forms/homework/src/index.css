@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-p.danger {
+span.danger {
   color: red;
   font-size: 10px;
 }

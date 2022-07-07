@@ -31,10 +31,10 @@ export function receivePost(post) {
 
 export function fetchPost(valor) {
   return function (dispatch) {
-    dispatch(getPost());
+    //dispatch(getPost());
     axios.get(`https://jsonplaceholder.typicode.com/todos/${valor}`)
-      .then(r => r.data)
-      .then(d => dispatch(receivePost(d)))
-      .catch(e => console.log(e));
+      .then(response => response.data)
+      .then(data => dispatch(receivePost(data)))
+      .catch(error => console.log(error));
   }
 }
